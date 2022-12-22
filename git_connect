@@ -1,0 +1,183 @@
+SHAKIR@DESKTOP-UE3O23S MINGW64 /e/dockerlab/dockerstart (master)
+$ git init
+Initialized empty Git repository in E:/dockerlab/dockerstart/.git/
+
+SHAKIR@DESKTOP-UE3O23S MINGW64 /e/dockerlab/dockerstart (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        docker.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+SHAKIR@DESKTOP-UE3O23S MINGW64 /e/dockerlab/dockerstart (master)
+$ git add docker.md
+
+SHAKIR@DESKTOP-UE3O23S MINGW64 /e/dockerlab/dockerstart (master)
+$ git commit -m "added files'
+> ^C
+
+SHAKIR@DESKTOP-UE3O23S MINGW64 /e/dockerlab/dockerstart (master)
+$ git commit -m "added files"
+[master (root-commit) 22c8ca7] added files
+ 1 file changed, 10 insertions(+)
+ create mode 100644 docker.md
+
+SHAKIR@DESKTOP-UE3O23S MINGW64 /e/dockerlab/dockerstart (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+SHAKIR@DESKTOP-UE3O23S MINGW64 /e/dockerlab/dockerstart (master)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+SHAKIR@DESKTOP-UE3O23S MINGW64 /e/dockerlab/dockerstart (master)
+$ git remote add https://github.com/shakirmir/docker_221222.git
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+
+SHAKIR@DESKTOP-UE3O23S MINGW64 /e/dockerlab/dockerstart (master)
+$ git remote add shakir https://github.com/shakirmir/docker_221222.git
+
+SHAKIR@DESKTOP-UE3O23S MINGW64 /e/dockerlab/dockerstart (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        docker1.png
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+SHAKIR@DESKTOP-UE3O23S MINGW64 /e/dockerlab/dockerstart (master)
+$ docker push
+bash: docker: command not found
+
+SHAKIR@DESKTOP-UE3O23S MINGW64 /e/dockerlab/dockerstart (master)
+$ git add docker1.png
+
+SHAKIR@DESKTOP-UE3O23S MINGW64 /e/dockerlab/dockerstart (master)
+$ docker commit -m "added png"
+bash: docker: command not found
+
+SHAKIR@DESKTOP-UE3O23S MINGW64 /e/dockerlab/dockerstart (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   docker1.png
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git1.png
+
+
+SHAKIR@DESKTOP-UE3O23S MINGW64 /e/dockerlab/dockerstart (master)
+$ git add git1.png
+
+SHAKIR@DESKTOP-UE3O23S MINGW64 /e/dockerlab/dockerstart (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   docker1.png
+        new file:   git1.png
+
+
+SHAKIR@DESKTOP-UE3O23S MINGW64 /e/dockerlab/dockerstart (master)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+SHAKIR@DESKTOP-UE3O23S MINGW64 /e/dockerlab/dockerstart (master)
+$ git push shakir
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 345 bytes | 172.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/shakirmir/docker_221222.git
+ * [new branch]      master -> master
+
+SHAKIR@DESKTOP-UE3O23S MINGW64 /e/dockerlab/dockerstart (master)
+$ ls
+docker.md  docker1.png  git1.png
+
+SHAKIR@DESKTOP-UE3O23S MINGW64 /e/dockerlab/dockerstart (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   docker1.png
+        new file:   git1.png
+
+
+SHAKIR@DESKTOP-UE3O23S MINGW64 /e/dockerlab/dockerstart (master)
+$ git add docker1.png
+
+SHAKIR@DESKTOP-UE3O23S MINGW64 /e/dockerlab/dockerstart (master)
+$ git add git1.png
+
+SHAKIR@DESKTOP-UE3O23S MINGW64 /e/dockerlab/dockerstart (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   docker1.png
+        new file:   git1.png
+
+
+SHAKIR@DESKTOP-UE3O23S MINGW64 /e/dockerlab/dockerstart (master)
+$ git commit -m "added png"
+[master bbb83c4] added png
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 docker1.png
+ create mode 100644 git1.png
+
+SHAKIR@DESKTOP-UE3O23S MINGW64 /e/dockerlab/dockerstart (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+SHAKIR@DESKTOP-UE3O23S MINGW64 /e/dockerlab/dockerstart (master)
+$ git push shakir
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 47.06 KiB | 4.28 MiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/shakirmir/docker_221222.git
+   22c8ca7..bbb83c4  master -> master
+
+SHAKIR@DESKTOP-UE3O23S MINGW64 /e/dockerlab/dockerstart (master)
+$
